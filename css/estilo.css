@@ -1,2 +1,24 @@
+*{
+    font-family: "Century Gothic";
+}
+
 body{
+    background-color: #702632;
+    color: #fffffa;
+}
+
+a{
+    color: #fffffa;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffff80;
+}
+
+nav ul li{
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 3px;
 }
