@@ -1,10 +1,64 @@
+/* PARTE GERAL DA PÁGINA*/ /**/
 *{
     font-family: "Century Gothic";
+    padding: 0;
+    margin: 0;
 }
 
+/*CABEÇALHO*/
+header{
+    background-color: #03719C;
+    text-align: center;
+    padding-top: 25px;
+    height: 50px;
+}
+
+/*Menu de Navegação*/
+nav{
+    text-align: center;
+    font-size: 25px;
+    border-bottom: solid 3px #D0FEFE;
+    background-color: #03719C;
+    padding-bottom: 5px;
+}
+
+nav a{
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover{
+    color: #ffff80;
+}
+
+/*Conteúdo do body em diante*/
 body{
-    background-color: #702632;
+    background-color: #343837;
     color: #fffffa;
+}
+
+section{
+    background-color:;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.quem-sou-eu img{
+    border-radius: 25%;
+    margin-top: 10px;
+}
+
+.quem-sou-eu p{
+    margin-top: 50px;
+}
+
+.habilidades{
+    margin-top: 30px;
+}
+
+.habilidades li{
+    margin-top: 10px;
 }
 
 a{
@@ -12,13 +66,3 @@ a{
     text-decoration: none;
 }
 
-a:hover{
-    color: #ffff80;
-}
-
-nav ul li{
-    list-style: none;
-    text-decoration: none;
-    font-size: 20px;
-    padding-bottom: 3px;
-}
