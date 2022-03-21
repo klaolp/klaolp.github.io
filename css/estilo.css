@@ -1,50 +1,53 @@
-/* PARTE GERAL DA PÁGINA*/
-* {
-    font-family: "Century Gothic";
+/* PARTE GERAL DA PÁGINA*/ /**/
+*{
     padding: 0;
     margin: 0;
+    font-family: "Century Gothic";
+    text-align: center;
 }
 
 /*CABEÇALHO*/
-header {
+header{
     background-color: #03719C;
     text-align: center;
-    padding-top: 25px;
-    height: 50px;
+    padding-top: 5px;
+    height: 150px;
+    width: 100%;
 }
 
-/*Menu de Navegação*/
-nav {
+.cabecalho{
+    height: 100px;
+}
+
+/*Menu de Navegação (Dentro do Header)*/
+nav{
     text-align: center;
     font-size: 25px;
+    height: 50px;
+    vertical-align: middle;
     border-bottom: solid 3px #D0FEFE;
-    background-color: #03719C;
-    padding-bottom: 5px;
 }
 
-nav a {
+nav a{
     text-decoration: none;
     margin-right: 15px;
 }
 
-nav a:hover {
+nav a:hover{
     color: #ffff80;
 }
 
-/*Conteúdo do body em diante*/
+/*Conteúdo do section em diante*/
 body {
-    background-color: #343837;
+    background-color: #666666;
     color: #fffffa;
+    height: 100vh;
 }
-
-section {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-}
-
-#nome{
-    margin-top: 10px;
+section{
+    height: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .quem-sou-eu img{
@@ -53,7 +56,7 @@ section {
 }
 
 .quem-sou-eu p{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .habilidades{
@@ -67,4 +70,42 @@ section {
 a{
     color: #fffffa;
     text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.quem-sou-eu img {
+    width: 154px;
+    height: 206px;
+}
+
+/* Rodapé */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.contato {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contato img{
+    width: 70px;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.blogs {
+    padding-left: 20px;
+    padding-right: 20px;
 }

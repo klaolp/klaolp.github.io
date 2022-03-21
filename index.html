@@ -7,26 +7,33 @@
     </head>
 
     <body>
+
         <header>
-            <h1>Meu Portfílio</h1>
-        </header>
-        <nav>
+            <div class="cabecalho">
+                <h1>Kelvin Lucas</h1>
+                <h2>Assis de Oliveira</h2>
+            </div>
+            <nav>
                 <a class="menu" href="#quem-sou-eu">Quem sou eu</a>
                 <a class="menu" href="#habilidades">Habilidades</a>
+                <a class="menu" href="#project">Projetos</a>
                 <a class="menu" href="#contato">Contato</a>
-                <a class="menu" href="blog">Blogs</a>
-        </nav>
-        <main>
+                <a class="menu" href="#blog">Blogs</a>
+             </nav>
+        </header>
+
+        <section>
             <div class="quem-sou-eu">
-                <h1>Quem sou eu:</h1>
-                <h3 id="nome"><b>Kelvin Lucas Assis de Oliveira</b></h3><br>
-                <img id="foto-perfil" src="imagens/foto-perfil.jpg" width="250px"><br>
-    
-                <p>Olá! Sou Kelvin Lucas pessoa estudante na Trybe, técnico em informática
-                     e estudante de ciência da computação na Universidade Federal Fluminense.
-                    Nascido em Ladário-MS, moro em São Pedro da Aldeia-RJ desde 1994.
+                <img id="foto-perfil" src="imagens/foto-perfil.jpg"><br>
+                <h2>Quem sou eu:</h2>
+                <p>Olá! me chamo Kelvin Lucas, nascido em Ladário-MS, moro em São Pedro da Aldeia-RJ 
+                    desde 1994. Sou técnico em informática
+                    estudo de ciência da computação na Universidade Federal Fluminense e agora também 
+                    sou uma pessoa estudante na Trybe.
+                    
                 </p>
             </div>
+            
             <div class="habilidades">
                 <h3>Habilidades das quais me orgulho</h3>
                 <ul>
@@ -34,10 +41,46 @@
                     <li></li>
                 </ul>
             </div>
-        </main>
+            <div class="projects" id="project">
+                <ul>
+                    <h3>Projetos Realizados</h3>
+                    <li>
+                        <a href="https://github.com/klaolp/projeto-leassons-learned-trybe">
+                            Lessons Leared
+                        </a>
+                    </li>
+                </ul>
+            </div>
+           
+        </section>
 
-        Blog: <a href="https://programacaodescomplicada.wordpress.com/" target="_blank">Programação Descomplicada</a>
-
+        <footer>
+            <div class="contato" id="contato">
+                <h3>Contatos</h3>
+                <a href="https://github.com/klaolp">
+                    <img 
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    />
+                </a>
+                <a href="https://www.linkedin.com/in/kelvin-lucas-assis-de-oliveira-46298821b/">
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original-wordmark.svg"
+                    />
+                </a>
+            </div>
+            <div class="blogs" id="blog">
+                <ul>
+                    <h3>Páginas recomendadas:</h3>
+                    <li>
+                        <a
+                            href="https://programacaodescomplicada.wordpress.com/"
+                            target="_blank"
+                        >
+                            Programação Descomplicada
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </body>
-    <script src = "js/script.js"></script>
 </html>
