@@ -48,6 +48,16 @@ section{
     display: flex;
     flex-direction: column;
     overflow: auto;
+    font-size: 1.15em;
+}
+
+section h3 {
+    font-size: 1.4em;
+}
+
+section .texto {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .quem-sou-eu img{
@@ -91,6 +101,10 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100px;
+}
+
+footer h3 {
+    font-size: 1.3em;
 }
 
 .contato {
