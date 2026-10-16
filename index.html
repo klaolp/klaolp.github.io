@@ -1,95 +1,317 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Portfólio | Kelvin Lucas</title>
         <meta charset="UTF-8">
-        <link href="css/estilo.css" rel="stylesheet" type="text/css">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        <meta name="description"
+            content="Portfólio profissional de Kelvin Lucas,
+            profissional de Tecnologia da Informação.">
+
+        <title>Kelvin Lucas | TI & Desenvolvimento</title>
+
+        <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+
+        <link rel="stylesheet" href="css/estilo.css">
     </head>
 
     <body>
 
-        <header>
-            <div class="cabecalho">
-                <h1>Kelvin Lucas</h1>
-                <h2>Assis  de Oliveira</h2>
+        
+        <header class="header">
+
+            <div class="header-container">
+
+                <a href="#inicio" class="logo" aria-label="Voltar ao início">
+
+                    <span class="logo-simbolo">KL<span>.</span></span>
+
+                    <div class="logo-texto">
+                        <strong>Kelvin Lucas</strong>
+                        <small>TI & Desenvolvimento</small>
+                    </div>
+
+                </a>
+
+                <nav class="menu-navegacao" aria-label="Navegação principal">
+
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre mim</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contato" class="menu-contato">Contato</a>
+
+                </nav>
+
             </div>
-            <nav>
-                <a class="menu" href="#quem-sou-eu">Quem sou eu</a>
-                <a class="menu" href="#habilidades">Habilidades</a>
-                <a class="menu" href="#project">Projetos</a>
-                <a class="menu" href="#contato">Contatos</a>
-                <a class="menu" href="#blog">Blogs</a>
-             </nav>
+
         </header>
 
-        <section>
-            <div class="quem-sou-eu">
-                <img id="foto-perfil" src="imagens/foto-perfil.jpg"><br>
-                <h3>Quem Sou Eu</h3>
-                <p class="texto">
-                    Olá! Me chamo Kelvin Lucas, sou Sul-Matrogrossense, moro em São Pedro da Aldeia-RJ 
-                    desde 1994. Sou técnico em informática, estou cursando a graduação de Tecnologia da Informação
-                    na Estácio de Sá e no momento também sou desenvolvedor Front-End. 
-                </p>
-            </div>
-            
-            <div class="habilidades">
-                <h3>Habilidades Das Quais Me Orgulho</h3>
-                <ul>
-                    <li>Suporte em TI</li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="projects" id="project">
-                <ul>
-                    <h3>Projetos Realizados</h3>
-                    <li>
-                        <a href="https://github.com/klaolp/projeto-leassons-learned-trybe">
-                            Lessons Leared
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/klaolp/projeto-playground-functions-trybe">
-                            Playground Functions
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/klaolp/projeto-pixel-art-trybe">
-                            Pixel Art
-                        </a>
-                    </li>
-                </ul>
-            </div>
-           
-        </section>
 
-        <footer>
-            <div class="contato" id="contato">
-                <h3>Contatos</h3>
-                <a href="https://github.com/klaolp">
-                    <img 
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                    />
-                </a>
-                <a href="https://www.linkedin.com/in/kelvin-lucas-assis-de-oliveira-46298821b/">
-                    <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original-wordmark.svg"
-                    />
-                </a>
-            </div>
-            <div class="blogs" id="blog">
-                <ul>
-                    <h3>Páginas recomendadas:</h3>
-                    <li>
-                        <a
-                            href="https://programacaodescomplicada.wordpress.com/"
-                            target="_blank"
+        <main>
+
+            <section id="inicio" class="inicio">
+
+                <div class="inicio-conteudo">
+
+                    <div class="inicio-texto">
+                        <span class="saudacao">
+                            Olá, seja bem-vindo ao meu portfólio!
+                        </span>
+
+                        <h2>Kelvin Lucas</h2>
+
+                        <h3>
+                            Infraestrutura de TI &
+                            Desenvolvimento
+                        </h3>
+
+                        <p>
+                            Transformando desafios tecnológicos
+                            em soluções eficientes.
+                        </p>
+
+                        <div class="inicio-botoes">
+                            <a href="#projetos" class="btn-primario">
+                                Meus projetos
+                            </a>
+
+                            <a href="#sobre" class="btn-secundario">
+                                Sobre mim
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="inicio-imagem">
+                        <img
+                            src="imagens/foto-perfil.jpg"
+                            alt="Foto de Kelvin Lucas"
                         >
-                            Programação Descomplicada
-                        </a>
-                    </li>
-                </ul>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ETAPA 2.2 - SOBRE MIM -->
+
+            <section id="sobre" class="sobre">
+
+                <div class="sobre-container">
+
+                    <h2>Sobre mim</h2>
+
+                    <div class="sobre-conteudo">
+
+                        <div class="sobre-texto">
+
+                            <h3>Minha trajetória na tecnologia</h3>
+
+                            <p>
+                                Sou Kelvin Lucas, profissional de Tecnologia
+                                da Informação, atualmente atuando como
+                                Analista de Infraestrutura e Suporte N2.
+                            </p>
+
+                            <p>
+                                Minha experiência envolve administração
+                                de ambientes corporativos, suporte técnico,
+                                gerenciamento de usuários e permissões,
+                                redes, servidores, segurança da informação
+                                e implantação de soluções tecnológicas.
+                            </p>
+
+                            <p>
+                                Também possuo conhecimentos em
+                                desenvolvimento Front-End e Back-End,
+                                com estudos em HTML, CSS, JavaScript,
+                                React, C# e bancos de dados.
+                            </p>
+
+                            <p>
+                                Busco aprimorar continuamente meus
+                                conhecimentos, desenvolvendo projetos
+                                que integrem infraestrutura, programação
+                                e novas tecnologias.
+                            </p>
+
+                        </div>
+
+                        <div class="sobre-cards">
+
+                            <article class="sobre-card">
+                                <h4>Infraestrutura de TI</h4>
+                                <p>
+                                    Redes, servidores, Active Directory,
+                                    Microsoft 365 e suporte corporativo.
+                                </p>
+                            </article>
+
+                            <article class="sobre-card">
+                                <h4>Desenvolvimento</h4>
+                                <p>
+                                    HTML, CSS, JavaScript, React,
+                                    C# e bancos de dados.
+                                </p>
+                            </article>
+
+                            <article class="sobre-card">
+                                <h4>Formação</h4>
+                                <p>
+                                    Técnico em Informática e
+                                    estudante de Informática para Internet.
+                                </p>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+            <section id="habilidades" class="habilidades">
+
+                <div class="habilidades-container">
+
+                    <h2>Minhas habilidades</h2>
+
+                    <p class="habilidades-descricao">
+                        Tecnologias, ferramentas e competências
+                        que fazem parte da minha trajetória.
+                    </p>
+
+                    <div class="habilidades-grid">
+
+                        <!-- INFRAESTRUTURA -->
+                        <article class="habilidade-card">
+                            <h3>🖥️ Infraestrutura de TI</h3>
+
+                            <ul class="habilidade-lista">
+                                <li>Windows Server</li>
+                                <li>Active Directory e GPO</li>
+                                <li>FortiGate e VPN</li>
+                                <li>Microsoft 365 / Exchange</li>
+                                <li>Redes e servidores</li>
+                            </ul>
+                        </article>
+
+                        <!-- DESENVOLVIMENTO -->
+                        <article class="habilidade-card">
+                            <h3>💻 Desenvolvimento</h3>
+
+                            <ul class="habilidade-lista">
+                                <li>HTML5 e CSS3</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>C# / ASP.NET Core</li>
+                                <li>SQL e PostgreSQL</li>
+                            </ul>
+                        </article>
+
+                        <!-- FERRAMENTAS -->
+                        <article class="habilidade-card">
+                            <h3>🛠️ Ferramentas</h3>
+
+                            <ul class="habilidade-lista">
+                                <li>Git e GitHub</li>
+                                <li>Docker e WSL2</li>
+                                <li>Visual Studio Code</li>
+                                <li>Figma</li>
+                                <li>Trello</li>
+                            </ul>
+                        </article>
+
+                        <!-- SUPORTE -->
+                        <article class="habilidade-card">
+                            <h3>🎧 Suporte e Operações</h3>
+
+                            <ul class="habilidade-lista">
+                                <li>Suporte técnico N2</li>
+                                <li>Diagnóstico de incidentes</li>
+                                <li>Telefonia IP e VoIP</li>
+                                <li>Monitoramento de infraestrutura</li>
+                                <li>Documentação técnica</li>
+                            </ul>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+        
+        <footer id="contato" class="footer">
+
+            <div class="contato-container">
+
+                <span class="contato-subtitulo">
+                    VAMOS CONVERSAR?
+                </span>
+
+                <h2>Entre em contato</h2>
+
+                <p class="contato-descricao">
+                    Tem algum projeto, oportunidade ou ideia em mente?
+                    Estou aberto a novas conexões e desafios profissionais.
+                </p>
+
+                <div class="contato-grid">
+
+                    <a href="https://github.com/klaolp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contato-card">
+
+                        <div class="contato-icone">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                alt=""
+                                class="icone-github"
+                            >
+                        </div>
+
+                        <h3>GitHub</h3>
+                        <p>Explore meus projetos</p>
+                        <span class="contato-link">Acessar perfil →</span>
+
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/kelvin-lucas-assis-de-oliveira-46298821b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contato-card">
+
+                        <div class="contato-icone">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                                alt=""
+                            >
+                        </div>
+
+                        <h3>LinkedIn</h3>
+                        <p>Conecte-se comigo</p>
+                        <span class="contato-link">Acessar perfil →</span>
+
+                    </a>
+
+                </div>
+
             </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Kelvin Lucas. Todos os direitos reservados.</p>
+                <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+            </div>
+
         </footer>
+
     </body>
 </html>

@@ -1,125 +1,518 @@
-/* PARTE GERAL DA PÁGINA*/ /**/
-*{
-    padding: 0;
+/* =========================================
+   PORTFÓLIO KELVIN LUCAS - ESTILO GERAL
+========================================= */
+:root {
+    --fundo: #0B1220;
+    --fundo-alternativo: #101B2D;
+    --superficie: #14253D;
+    --borda: #243B55;
+    --destaque: #38BDF8;
+    --botao: #2563EB;
+    --texto: #F1F5F9;
+    --texto-suave: #CBD5E1;
+}
+
+* {
     margin: 0;
-    font-family: "Century Gothic";
-    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*CABEÇALHO*/
-header{
-    background-color: #03719C;
-    text-align: center;
-    padding-top: 5px;
-    height: 150px;
-    width: 100%;
-}
+html { scroll-behavior: smooth; }
 
-.cabecalho{
-    height: 100px;
-}
-
-/*Menu de Navegação (Dentro do Header)*/
-nav{
-    text-align: center;
-    font-size: 25px;
-    height: 50px;
-    vertical-align: middle;
-    border-bottom: solid 3px #D0FEFE;
-}
-
-nav a{
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-nav a:hover{
-    color: #ffff80;
-}
-
-/*Conteúdo do section em diante*/
 body {
-    background-color: #666666;
-    color: #fffffa;
-    height: 100vh;
-}
-section{
-    height: calc(100% - 250px);
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: auto;
-    font-size: 1.15em;
 }
 
-section h3 {
-    font-size: 1.4em;
+a { color: inherit; }
+
+
+/* =========================================
+   HEADER MODERNO
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    padding: 15px 6%;
+
+    background-color: rgba(20, 37, 61, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #243B55;
 }
 
-section .texto {
-    padding-left: 10%;
-    padding-right: 10%;
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
-.quem-sou-eu img{
-    border-radius: 25%;
-    margin-top: 10px;
+/* LOGOTIPO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
 }
 
-.quem-sou-eu p{
-    margin-top: 20px;
+.logo-simbolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    background-color: #0B1220;
+    border: 1px solid #38BDF8;
+    border-radius: 12px;
+
+    color: #38BDF8;
+    font-size: 1.4rem;
+    font-weight: 800;
 }
 
-.habilidades{
+.logo-simbolo span {
+    color: white;
+}
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.logo-texto strong {
+    color: #F8FAFC;
+    font-size: 1rem;
+}
+
+.logo-texto small {
+    color: #94A3B8;
+    font-size: 0.75rem;
+}
+
+/* MENU */
+
+.menu-navegacao {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu-navegacao a {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+    color: #38BDF8;
+}
+
+/* BOTÃO CONTATO */
+
+.menu-navegacao .menu-contato {
+    background-color: #2563EB;
+    color: white;
+
+    padding: 11px 20px;
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.menu-navegacao .menu-contato:hover {
+    background-color: #1D4ED8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 12px 5%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-navegacao {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .menu-navegacao a {
+        font-size: 0.85rem;
+    }
+
+    .logo-simbolo {
+        width: 44px;
+        height: 44px;
+    }
+
+}
+
+/* COMPENSAÇÃO PARA HEADER FIXO */
+
+section,
+footer {
+    scroll-margin-top: 110px;
+}
+
+@media (max-width: 768px) {
+    section,
+    footer {
+        scroll-margin-top: 180px;
+    }
+}
+
+
+/* ETAPA 2.1 - APRESENTAÇÃO INICIAL */
+.inicio {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+}
+
+.inicio-conteudo {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.inicio-texto {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.saudacao { color: var(--destaque); font-size: 1rem; }
+
+.inicio-texto h2 {
+    font-size: 3.5rem;
+    color: var(--texto);
+    margin: 15px 0;
+}
+
+.inicio-texto h3 {
+    font-size: 1.5rem;
+    color: var(--destaque);
+    margin-bottom: 20px;
+}
+
+.inicio-texto p { color: var(--texto-suave); font-size: 1.1rem; }
+
+.inicio-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 30px;
 }
 
-.habilidades li{
+.inicio-botoes a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform .3s ease, background-color .3s ease;
+}
+
+.btn-primario { background-color: var(--botao); color: white; }
+.btn-secundario { border: 2px solid var(--destaque); color: var(--destaque); }
+.inicio-botoes a:hover { transform: translateY(-3px); }
+
+.inicio-imagem img {
+    display: block;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--destaque);
+}
+
+/* Compatibilidade com foto da estrutura anterior */
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* ETAPA 2.2 - SOBRE MIM */
+.sobre { background-color: var(--fundo-alternativo); padding: 80px 8%; }
+.sobre-container { max-width: 1100px; margin: 0 auto; }
+.sobre-container h2 { font-size: 2rem; margin-bottom: 40px; }
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-texto { text-align: left; }
+.sobre-texto h3 { color: var(--destaque); font-size: 1.5rem; margin-bottom: 20px; }
+.sobre-texto p { color: var(--texto-suave); line-height: 1.8; margin-bottom: 18px; }
+
+.sobre-cards { display: flex; flex-direction: column; gap: 20px; }
+
+.sobre-card {
+    background-color: var(--superficie);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+    text-align: left;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.sobre-card:hover { transform: translateY(-5px); border-color: var(--destaque); }
+.sobre-card h4 { color: var(--destaque); margin-bottom: 10px; font-size: 1.1rem; }
+.sobre-card p { color: var(--texto-suave); font-size: .95rem; line-height: 1.6; }
+
+/* ETAPA 3 - HABILIDADES TÉCNICAS */
+.habilidades { background-color: var(--fundo); padding: 80px 8%; }
+.habilidades-container { max-width: 1100px; margin: 0 auto; }
+.habilidades-container h2 { font-size: 2rem; margin-bottom: 15px; }
+.habilidades-descricao { color: var(--texto-suave); margin-bottom: 40px; }
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.habilidade-card {
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, .12);
+}
+
+.habilidade-card h3 { color: var(--destaque); font-size: 1.25rem; margin-bottom: 20px; }
+
+.habilidade-lista { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+.habilidade-lista li {
+    background-color: #203650;
+    color: var(--texto-suave);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: .9rem;
+}
+
+
+/* =========================================
+   CONTATO E RODAPÉ
+========================================= */
+
+.footer {
+    background-color: #14253D;
+    padding: 80px 8% 25px;
+    text-align: center;
+}
+
+.contato-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contato-subtitulo {
+    color: #38BDF8;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contato-container h2 {
+    color: #F8FAFC;
+    font-size: 2.2rem;
+    margin: 15px 0;
+}
+
+.contato-descricao {
+    color: #CBD5E1;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* CARDS DE CONTATO */
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.contato-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    background-color: #0B1220;
+    border: 1px solid #243B55;
+    border-radius: 14px;
+
+    padding: 35px 20px;
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-6px);
+    border-color: #38BDF8;
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.12);
+}
+
+.contato-icone {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #203650;
+    border-radius: 12px;
+
+    color: #38BDF8;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contato-card h3 {
+    color: #F8FAFC;
+    font-size: 1.2rem;
+}
+
+.contato-card p {
+    color: #94A3B8;
+    font-size: 0.9rem;
+}
+
+.contato-link {
+    color: #38BDF8;
+    font-size: 0.85rem;
+    font-weight: bold;
     margin-top: 10px;
 }
 
-a{
-    color: #fffffa;
-    text-decoration: none;
-}
+/* RODAPÉ INFERIOR */
 
-a:hover {
-    color: black;
-}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
 
-.quem-sou-eu img {
-    width: 154px;
-    height: 206px;
-}
+    padding-top: 25px;
+    border-top: 1px solid #243B55;
 
-/* Rodapé */
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 100px;
+    gap: 15px;
 }
 
-footer h3 {
-    font-size: 1.3em;
+.footer-bottom p {
+    color: #94A3B8;
+    font-size: 0.85rem;
 }
 
-.contato {
-    padding-left: 20px;
-    padding-right: 20px;
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 60px 6% 25px;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contato-container h2 {
+        font-size: 1.8rem;
+    }
 }
 
-.contato img{
-    width: 70px;
-    height: 70px;
-    padding-left: 10px;
-    padding-right: 10px;
+/* ÍCONES DAS REDES SOCIAIS */
+
+.contato-icone img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.blogs {
-    padding-left: 20px;
-    padding-right: 20px;
+/* O ícone original do GitHub é preto.
+   Este filtro o torna branco no tema escuro. */
+
+.icone-github {
+    filter: brightness(0) invert(1);
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.contato-card {
+    cursor: pointer;
+}
+
+.contato-card:hover .contato-icone img {
+    transform: scale(1.15);
+}
+
+/* ACESSIBILIDADE PARA TECLADO */
+
+.contato-card:focus-visible {
+    outline: 2px solid #38BDF8;
+    outline-offset: 4px;
 }
