@@ -1,6 +1,9 @@
-/* =========================================
-   PORTFÓLIO KELVIN LUCAS - ESTILO GERAL
-========================================= */
+/* =====================================================
+   KELVIN LUCAS | PORTFÓLIO
+   CSS consolidado — identidade visual e responsividade
+===================================================== */
+
+/* 1. VARIÁVEIS E RESET */
 :root {
     --fundo: #0B1220;
     --fundo-alternativo: #101B2D;
@@ -10,189 +13,109 @@
     --botao: #2563EB;
     --texto: #F1F5F9;
     --texto-suave: #CBD5E1;
+    --texto-discreto: #94A3B8;
+    --largura-maxima: 1100px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--fundo);
-    color: var(--texto);
+    min-width: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
 }
-
+img, svg { max-width: 100%; }
 a { color: inherit; }
+section, footer { scroll-margin-top: 100px; }
 
-
-/* =========================================
-   HEADER MODERNO
-========================================= */
-
+/* 2. HEADER E NAVEGAÇÃO */
 .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     width: 100%;
     padding: 15px 6%;
-
-    background-color: rgba(20, 37, 61, 0.92);
+    background: rgba(20, 37, 61, .95);
     backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid #243B55;
+    border-bottom: 1px solid var(--borda);
 }
-
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
 }
-
-/* LOGOTIPO */
-
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
-
+    min-width: 0;
     text-decoration: none;
 }
-
 .logo-simbolo {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 52px;
-    height: 52px;
-
-    background-color: #0B1220;
-    border: 1px solid #38BDF8;
+    background: var(--fundo);
+    border: 1px solid var(--destaque);
     border-radius: 12px;
-
-    color: #38BDF8;
+    color: var(--destaque);
     font-size: 1.4rem;
     font-weight: 800;
 }
-
-.logo-simbolo span {
-    color: white;
-}
-
-.logo-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.logo-texto strong {
-    color: #F8FAFC;
-    font-size: 1rem;
-}
-
-.logo-texto small {
-    color: #94A3B8;
-    font-size: 0.75rem;
-}
-
-/* MENU */
-
-.menu-navegacao {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
+.logo-simbolo span { color: #fff; }
+.logo-texto { display: flex; flex-direction: column; gap: 3px; }
+.logo-texto strong { color: #F8FAFC; font-size: 1rem; }
+.logo-texto small { color: var(--texto-discreto); font-size: .75rem; }
+.menu-navegacao { display: flex; align-items: center; gap: 28px; }
 .menu-navegacao a {
-    color: #CBD5E1;
-    text-decoration: none;
-    font-size: 0.9rem;
+    color: var(--texto-suave);
+    font-size: .9rem;
     font-weight: 500;
-
-    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: color .3s ease;
 }
-
-.menu-navegacao a:hover {
-    color: #38BDF8;
-}
-
-/* BOTÃO CONTATO */
-
+.menu-navegacao a:hover { color: var(--destaque); }
 .menu-navegacao .menu-contato {
-    background-color: #2563EB;
-    color: white;
-
     padding: 11px 20px;
     border-radius: 8px;
-
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+    background: var(--botao);
+    color: #fff;
+    transition: background .3s ease, transform .3s ease;
 }
-
 .menu-navegacao .menu-contato:hover {
-    background-color: #1D4ED8;
-    color: white;
+    background: #1D4ED8;
+    color: #fff;
     transform: translateY(-2px);
 }
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 768px) {
-
-    .header {
-        padding: 12px 5%;
-    }
-
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .menu-navegacao {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px 18px;
-    }
-
-    .menu-navegacao a {
-        font-size: 0.85rem;
-    }
-
-    .logo-simbolo {
-        width: 44px;
-        height: 44px;
-    }
-
+.menu-toggle {
+    display: none;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 3px;
+    background: var(--destaque);
+    transition: transform .3s ease, opacity .3s ease;
 }
 
-/* COMPENSAÇÃO PARA HEADER FIXO */
-
-section,
-footer {
-    scroll-margin-top: 110px;
-}
-
-@media (max-width: 768px) {
-    section,
-    footer {
-        scroll-margin-top: 180px;
-    }
-}
-
-
-/* ETAPA 2.1 - APRESENTAÇÃO INICIAL */
+/* 3. APRESENTAÇÃO INICIAL */
 .inicio {
     min-height: 75vh;
     display: flex;
@@ -200,319 +123,300 @@ footer {
     justify-content: center;
     padding: 60px 8%;
 }
-
 .inicio-conteudo {
     width: 100%;
-    max-width: 1100px;
+    max-width: var(--largura-maxima);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
 }
-
-.inicio-texto {
-    flex: 1;
-    min-width: 0;
-    text-align: left;
-}
-
+.inicio-texto { flex: 1; min-width: 0; text-align: left; }
 .saudacao { color: var(--destaque); font-size: 1rem; }
-
-.inicio-texto h2 {
-    font-size: 3.5rem;
-    color: var(--texto);
-    margin: 15px 0;
-}
-
-.inicio-texto h3 {
-    font-size: 1.5rem;
-    color: var(--destaque);
-    margin-bottom: 20px;
-}
-
-.inicio-texto p { color: var(--texto-suave); font-size: 1.1rem; }
-
-.inicio-botoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 30px;
-}
-
+.inicio-texto h2 { margin: 15px 0; font-size: 3.5rem; }
+.inicio-texto h3 { margin-bottom: 20px; color: var(--destaque); font-size: 1.5rem; }
+.inicio-texto p { color: var(--texto-suave); font-size: 1.1rem; line-height: 1.7; }
+.inicio-botoes { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 30px; }
 .inicio-botoes a {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 8px;
-    text-decoration: none;
     font-weight: bold;
-    transition: transform .3s ease, background-color .3s ease;
+    text-decoration: none;
+    transition: transform .3s ease, background .3s ease;
 }
-
-.btn-primario { background-color: var(--botao); color: white; }
+.btn-primario { background: var(--botao); color: #fff; }
 .btn-secundario { border: 2px solid var(--destaque); color: var(--destaque); }
 .inicio-botoes a:hover { transform: translateY(-3px); }
-
+.inicio-imagem { flex-shrink: 0; }
 .inicio-imagem img {
     display: block;
     width: 280px;
     height: 280px;
-    border-radius: 50%;
+    max-width: 100%;
     object-fit: cover;
     border: 4px solid var(--destaque);
+    border-radius: 50%;
 }
-
-/* Compatibilidade com foto da estrutura anterior */
 .foto-perfil {
     width: 160px;
     height: 160px;
+    margin-bottom: 20px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 20px;
 }
 
-/* ETAPA 2.2 - SOBRE MIM */
-.sobre { background-color: var(--fundo-alternativo); padding: 80px 8%; }
-.sobre-container { max-width: 1100px; margin: 0 auto; }
-.sobre-container h2 { font-size: 2rem; margin-bottom: 40px; }
-
+/* 4. SOBRE MIM */
+.sobre { padding: 80px 8%; background: var(--fundo-alternativo); }
+.sobre-container { max-width: var(--largura-maxima); margin: 0 auto; }
+.sobre-container h2 { margin-bottom: 40px; font-size: 2rem; }
 .sobre-conteudo {
     display: grid;
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-    gap: 50px;
     align-items: center;
+    gap: 50px;
 }
-
+.sobre-texto, .sobre-cards { min-width: 0; }
 .sobre-texto { text-align: left; }
-.sobre-texto h3 { color: var(--destaque); font-size: 1.5rem; margin-bottom: 20px; }
-.sobre-texto p { color: var(--texto-suave); line-height: 1.8; margin-bottom: 18px; }
-
+.sobre-texto h3 { margin-bottom: 20px; color: var(--destaque); font-size: 1.5rem; }
+.sobre-texto p { margin-bottom: 18px; color: var(--texto-suave); line-height: 1.8; }
 .sobre-cards { display: flex; flex-direction: column; gap: 20px; }
-
 .sobre-card {
-    background-color: var(--superficie);
+    min-width: 0;
     padding: 25px;
-    border-radius: 12px;
     border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: var(--superficie);
     text-align: left;
     transition: transform .3s ease, border-color .3s ease;
 }
-
 .sobre-card:hover { transform: translateY(-5px); border-color: var(--destaque); }
-.sobre-card h4 { color: var(--destaque); margin-bottom: 10px; font-size: 1.1rem; }
-.sobre-card p { color: var(--texto-suave); font-size: .95rem; line-height: 1.6; }
+.sobre-card h4 { margin-bottom: 10px; color: var(--destaque); font-size: 1.1rem; overflow-wrap: break-word; }
+.sobre-card p { color: var(--texto-suave); font-size: .95rem; line-height: 1.6; overflow-wrap: break-word; }
 
-/* ETAPA 3 - HABILIDADES TÉCNICAS */
-.habilidades { background-color: var(--fundo); padding: 80px 8%; }
-.habilidades-container { max-width: 1100px; margin: 0 auto; }
-.habilidades-container h2 { font-size: 2rem; margin-bottom: 15px; }
-.habilidades-descricao { color: var(--texto-suave); margin-bottom: 40px; }
-
+/* 5. HABILIDADES */
+.habilidades { padding: 80px 8%; background: var(--fundo); }
+.habilidades-container { max-width: var(--largura-maxima); margin: 0 auto; }
+.habilidades-container h2 { margin-bottom: 15px; font-size: 2rem; }
+.habilidades-descricao { margin-bottom: 40px; color: var(--texto-suave); }
 .habilidades-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
 }
-
 .habilidade-card {
-    background-color: var(--superficie);
+    min-width: 0;
+    padding: 30px;
     border: 1px solid var(--borda);
     border-radius: 12px;
-    padding: 30px;
+    background: var(--superficie);
     text-align: left;
     transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
-
 .habilidade-card:hover {
     transform: translateY(-6px);
     border-color: var(--destaque);
     box-shadow: 0 8px 25px rgba(56, 189, 248, .12);
 }
-
-.habilidade-card h3 { color: var(--destaque); font-size: 1.25rem; margin-bottom: 20px; }
-
+.habilidade-card h3 { margin-bottom: 20px; color: var(--destaque); font-size: 1.25rem; }
 .habilidade-lista { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
 .habilidade-lista li {
-    background-color: #203650;
-    color: var(--texto-suave);
     padding: 8px 12px;
     border-radius: 6px;
+    background: #203650;
+    color: var(--texto-suave);
     font-size: .9rem;
+    overflow-wrap: anywhere;
 }
 
-
-/* =========================================
-   CONTATO E RODAPÉ
-========================================= */
-
-.footer {
-    background-color: #14253D;
-    padding: 80px 8% 25px;
-    text-align: center;
-}
-
-.contato-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
+/* 6. CONTATO E RODAPÉ */
+.footer { padding: 80px 8% 25px; background: var(--superficie); text-align: center; }
+.contato-container { max-width: 1000px; margin: 0 auto; }
 .contato-subtitulo {
-    color: #38BDF8;
-    font-size: 0.85rem;
+    color: var(--destaque);
+    font-size: .85rem;
     font-weight: bold;
     letter-spacing: 2px;
 }
-
-.contato-container h2 {
-    color: #F8FAFC;
-    font-size: 2.2rem;
-    margin: 15px 0;
-}
-
+.contato-container h2 { margin: 15px 0; color: #F8FAFC; font-size: 2.2rem; }
 .contato-descricao {
-    color: #CBD5E1;
     max-width: 600px;
     margin: 0 auto 40px;
+    color: var(--texto-suave);
     line-height: 1.8;
 }
-
-/* CARDS DE CONTATO */
-
 .contato-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
     margin-bottom: 60px;
 }
-
 .contato-card {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-
-    background-color: #0B1220;
-    border: 1px solid #243B55;
-    border-radius: 14px;
-
     padding: 35px 20px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background: var(--fundo);
     text-decoration: none;
-
-    transition: transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
-
 .contato-card:hover {
     transform: translateY(-6px);
-    border-color: #38BDF8;
-    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.12);
+    border-color: var(--destaque);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, .12);
 }
-
+.contato-card:focus-visible { outline: 2px solid var(--destaque); outline-offset: 4px; }
 .contato-icone {
     width: 55px;
     height: 55px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-color: #203650;
     border-radius: 12px;
-
-    color: #38BDF8;
+    background: #203650;
+    color: var(--destaque);
     font-size: 1.5rem;
     font-weight: bold;
 }
-
-.contato-card h3 {
-    color: #F8FAFC;
-    font-size: 1.2rem;
-}
-
-.contato-card p {
-    color: #94A3B8;
-    font-size: 0.9rem;
-}
-
-.contato-link {
-    color: #38BDF8;
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* RODAPÉ INFERIOR */
-
-.footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    padding-top: 25px;
-    border-top: 1px solid #243B55;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-
-.footer-bottom p {
-    color: #94A3B8;
-    font-size: 0.85rem;
-}
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 768px) {
-
-    .footer {
-        padding: 60px 6% 25px;
-    }
-
-    .contato-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contato-container h2 {
-        font-size: 1.8rem;
-    }
-}
-
-/* ÍCONES DAS REDES SOCIAIS */
-
 .contato-icone img {
     width: 32px;
     height: 32px;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
+}
+.icone-github { filter: brightness(0) invert(1); }
+.contato-card:hover .contato-icone img { transform: scale(1.15); }
+.contato-card h3 { color: #F8FAFC; font-size: 1.2rem; }
+.contato-card p { color: var(--texto-discreto); font-size: .9rem; }
+.contato-link { margin-top: 10px; color: var(--destaque); font-size: .85rem; font-weight: bold; }
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-top: 1px solid var(--borda);
+}
+.footer-bottom p { color: var(--texto-discreto); font-size: .85rem; }
+
+/* 7. TABLETS */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .inicio { min-height: 65vh; padding: 60px 5%; }
+    .inicio-conteudo { gap: 30px; }
+    .inicio-texto h2 { font-size: 2.8rem; }
+    .inicio-texto h3 { font-size: 1.3rem; }
+    .inicio-imagem img { width: 230px; height: 230px; }
+    .sobre, .habilidades { padding: 65px 5%; }
+    .sobre-conteudo { gap: 30px; }
+    .sobre-cards, .habilidades-grid, .contato-grid { gap: 20px; }
 }
 
-/* O ícone original do GitHub é preto.
-   Este filtro o torna branco no tema escuro. */
+/* 8. CELULARES */
+@media (max-width: 768px) {
+    section, footer { scroll-margin-top: 90px; }
 
-.icone-github {
-    filter: brightness(0) invert(1);
+    /* Header compacto e menu hambúrguer */
+    .header { padding: 12px 5%; }
+    .header-container { flex-direction: row; gap: 10px; }
+    .logo-simbolo { width: 44px; height: 44px; }
+    .logo-texto strong { font-size: .9rem; }
+    .logo-texto small { font-size: .7rem; }
+    .menu-toggle { display: block; flex-shrink: 0; }
+    .menu-navegacao {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        background: var(--superficie);
+        border-bottom: 1px solid var(--borda);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, .3);
+    }
+    .menu-navegacao.ativo { display: flex; }
+    .menu-navegacao a { display: block; padding: 12px; border-radius: 8px; text-align: center; }
+    .menu-navegacao a:hover { background: #203650; }
+    .menu-navegacao .menu-contato { text-align: center; }
+    .menu-toggle.ativo span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.ativo span:nth-child(2) { opacity: 0; }
+    .menu-toggle.ativo span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Hero: foto acima do texto */
+    .inicio { min-height: auto; padding: 45px 6% 60px; }
+    .inicio-conteudo { flex-direction: column-reverse; justify-content: center; gap: 30px; }
+    .inicio-imagem { width: 100%; display: flex; justify-content: center; }
+    .inicio-imagem img {
+        width: 180px;
+        height: 180px;
+        border-width: 3px;
+        box-shadow: 0 0 25px rgba(56, 189, 248, .15);
+    }
+    .inicio-texto { width: 100%; text-align: center; }
+    .saudacao { display: block; font-size: .85rem; line-height: 1.5; }
+    .inicio-texto h2 { margin: 15px 0; font-size: clamp(2rem, 8vw, 2.7rem); line-height: 1.15; }
+    .inicio-texto h3 { margin-bottom: 15px; font-size: 1.2rem; line-height: 1.5; }
+    .inicio-texto p { max-width: 450px; margin: 0 auto; font-size: 1rem; }
+    .inicio-botoes { width: 100%; max-width: 360px; margin: 30px auto 0; flex-direction: column; gap: 12px; }
+    .inicio-botoes a { display: block; width: 100%; padding: 14px 20px; text-align: center; }
+
+    /* Sobre: uma coluna para texto e cards */
+    .sobre { padding: 55px 6%; }
+    .sobre-container { width: 100%; }
+    .sobre-container h2 { margin-bottom: 25px; font-size: clamp(1.6rem, 6vw, 2rem); line-height: 1.3; }
+    .sobre-conteudo { grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: stretch; }
+    .sobre-texto, .sobre-cards { width: 100%; min-width: 0; }
+    .sobre-texto h3 { font-size: 1.4rem; line-height: 1.35; }
+    .sobre-texto p { font-size: .95rem; line-height: 1.75; }
+    .sobre-cards { gap: 15px; }
+    .sobre-card { width: 100%; padding: 22px; }
+
+    /* Habilidades: uma coluna, sem texto espremido */
+    .habilidades { padding: 55px 6%; }
+    .habilidades-container { width: 100%; }
+    .habilidades-container h2 { font-size: clamp(1.6rem, 6vw, 2rem); }
+    .habilidades-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .habilidade-card { width: 100%; padding: 22px; }
+    .habilidade-card h3 { font-size: 1.1rem; }
+    .habilidade-lista { gap: 8px; }
+
+    /* Contato e rodapé */
+    .footer { padding: 60px 6% 25px; }
+    .contato-container { width: 100%; }
+    .contato-container h2 { font-size: 1.8rem; }
+    .contato-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .contato-card { width: 100%; padding: 25px 20px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
 }
 
-/* EFEITO AO PASSAR O MOUSE */
-
-.contato-card {
-    cursor: pointer;
+/* 9. CELULARES MUITO PEQUENOS */
+@media (max-width: 360px) {
+    .logo { gap: 8px; }
+    .logo-texto strong { font-size: .8rem; }
+    .logo-texto small { font-size: .65rem; }
+    .inicio { padding: 35px 5% 50px; }
+    .inicio-imagem img { width: 150px; height: 150px; }
+    .inicio-texto h2 { font-size: 1.9rem; }
+    .inicio-texto h3 { font-size: 1.05rem; }
+    .sobre, .habilidades { padding: 45px 5%; }
+    .sobre-card, .habilidade-card, .contato-card { padding: 18px; }
 }
 
-.contato-card:hover .contato-icone img {
-    transform: scale(1.15);
-}
-
-/* ACESSIBILIDADE PARA TECLADO */
-
-.contato-card:focus-visible {
-    outline: 2px solid #38BDF8;
-    outline-offset: 4px;
+/* 10. ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
 }
