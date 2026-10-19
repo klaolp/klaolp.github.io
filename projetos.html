@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Conheça os projetos de infraestrutura e desenvolvimento de Kelvin Lucas.">
+
+    <title>Projetos | Kelvin Lucas</title>
+
+    <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Voltar ao início">
+                <span class="logo-simbolo">
+                    KL<span>.</span>
+                </span>
+
+                <div class="logo-texto">
+                    <strong>Kelvin Lucas</strong>
+                    <small>TI & Desenvolvimento</small>
+                </div>
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menu-principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-navegacao"
+                 id="menu-principal"
+                 aria-label="Navegação principal">
+                <a href="index.html#inicio">Início</a>
+                <a href="index.html#sobre">Sobre mim</a>
+                <a href="index.html#habilidades">Habilidades</a>
+                <a href="projetos.html" aria-current="page">Projetos</a>
+                <a href="index.html#contato" class="menu-contato">
+                    Contato
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina-projetos">
+        <section class="projetos" aria-labelledby="titulo-projetos">
+            <div class="projetos-container">
+                <a href="index.html" class="projetos-voltar">
+                    ← Voltar ao início
+                </a>
+
+                <h1 id="titulo-projetos">Meus projetos</h1>
+
+                <p class="projetos-descricao">
+                    Projetos que desenvolvo para colocar meus conhecimentos
+                    em prática e solucionar desafios do dia a dia.
+                </p>
+
+                <div class="projetos-grid">
+                    <article class="projeto-card">
+                        <div class="projeto-capa" aria-hidden="true">
+                            <span>&lt;/&gt;</span>
+                            <strong>Portfólio pessoal</strong>
+                            <small>TI & Desenvolvimento</small>
+                        </div>
+
+                        <div class="projeto-conteudo">
+                            <span class="projeto-status">Publicado</span>
+
+                            <h2>Portfólio pessoal</h2>
+
+                            <p>
+                                Site responsivo para apresentar minha
+                                trajetória, habilidades e projetos, com
+                                navegação adaptada para computadores
+                                e celulares.
+                            </p>
+
+                            <ul class="projeto-tecnologias"
+                                aria-label="Tecnologias do portfólio">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>GitHub Pages</li>
+                            </ul>
+
+                            <div class="projeto-acoes">
+                              <a href="index.html" class="projeto-botao">
+                                  Ver portfólio
+                              </a>
+
+                              <a href="https://github.com/klaolp/klaolp.github.io"
+                                class="projeto-botao projeto-botao-secundario"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                  Ver código ↗
+                              </a>
+                          </div>
+                        </div>
+                    </article>
+
+                    <article class="projeto-card">
+                        <div class="projeto-capa projeto-capa-portal"
+                             aria-hidden="true">
+                            <span>{ }</span>
+                            <strong>Portal corporativo</strong>
+                            <small>Informação e comunicação</small>
+                        </div>
+
+                        <div class="projeto-conteudo">
+                            <span class="projeto-status projeto-status-andamento">
+                                Em desenvolvimento
+                            </span>
+
+                            <h2>Portal corporativo</h2>
+
+                            <p>
+                                Projeto de portal para comunicação interna,
+                                com mural de avisos, visualização completa
+                                de comunicados e painel administrativo.
+                            </p>
+
+                            <ul class="projeto-tecnologias"
+                                aria-label="Tecnologias do portal">
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>C#</li>
+                                <li>ASP.NET Core</li>
+                                <li>PostgreSQL</li>
+                                <li>Docker</li>
+                            </ul>
+
+                            <div class="projeto-acoes">
+                              <a href="https://github.com/klaolp/portal-corporativo-diasa"
+                                class="projeto-botao projeto-botao-secundario"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                  Ver código ↗
+                              </a>
+
+                              <span class="projeto-indisponivel">
+                                  Demonstração em preparação
+                              </span>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+
+                <a href="https://github.com/klaolp"
+                   class="projetos-github"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Explorar meu GitHub ↗
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2026 Kelvin Lucas. Todos os direitos reservados.</p>
+            <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
